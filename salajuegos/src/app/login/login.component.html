@@ -1,1 +1,16 @@
-<p>login works!</p>
+    <header>
+        <h1>Portal de Login</h1>
+    </header>
+     <main>
+        <form id="login_form" class="form_class" action="login/login-access.php" method="post">
+            <div class="form_div">
+                <label>Login:</label>
+                <input class="field_class" name="login_txt" type="text"  [(ngModel)]="miUsuario.correo" placeholder="Ingrese usuario" autofocus>
+                <label>Password:</label>
+                <input class="field_class" name="password_txt" [(ngModel)]="miUsuario.contrasena"  type="password" placeholder="Ingrese contraseña">
+                <button class="submit_class"  form="login_form" (click)="entrar()">Entrar</button>
+            </div>
+        
+        </form>
+    </main>
+ 

@@ -1,15 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Usuario } from '../Entidades/usuario';
+import { Router } from '@angular/router';
+import {AuthService } from '../servicios/auth.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
-  constructor() { }
+  // constructor(private  router:Router) { }
 
-  ngOnInit(): void {
+  // miUsuario=new Usuario();
+  // entrar()
+  // {
+  //   localStorage.setItem('usuario', JSON.stringify(this.miUsuario.correo));
+
+
+  //   this.router.navigate(['bienvenido']) ;  
+  // }
+ 
+  usuario:Usuario= new Usuario();
+  constructor(private authSvc:AuthService,private router:Router) { }
+
+
+  ngOnInit() {
   }
-
+  async onLogin()
+  {
+    const user=await this.authSvc.onLogin(this.usuario);
+    if(this.usuario){
+      console.log('Successfully');
+      this.router.navigateByUrl('/home');
+    }
+  }
 }
