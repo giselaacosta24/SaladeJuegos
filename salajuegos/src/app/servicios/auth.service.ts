@@ -19,11 +19,11 @@ export class AuthService {
   login(usuario:Usuario) {
     this.afAuth.signInWithEmailAndPassword(usuario.correo,usuario.contrasena)
     .then(value => {
-      console.log('Nice, it worked!');
+      console.log('Funcionó,usuario logueado');
       this.router.navigateByUrl('/home');
     })
     .catch(err => {
-      console.log('Something went wrong: ', err.message);
+      console.log('Algo esta mal: ', err.message);
     });
   }
   //login
