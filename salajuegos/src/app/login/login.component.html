@@ -8,7 +8,7 @@
                 <input class="field_class" name="login_txt" type="text"  [(ngModel)]="miUsuario.correo" placeholder="Ingrese usuario" autofocus>
                 <label>Password:</label>
                 <input class="field_class" name="password_txt" [(ngModel)]="miUsuario.contrasena"  type="password" placeholder="Ingrese contraseña">
-                <button class="submit_class"  form="login_form" (click)="entrar()">Entrar</button>
+                <button class="submit_class"  form="login_form" (click)="onLogin()">Entrar</button>
             </div>
         
         </form>

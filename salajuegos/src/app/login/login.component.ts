@@ -11,7 +11,7 @@ export class LoginComponent  {
 
   // constructor(private  router:Router) { }
 
-  // miUsuario=new Usuario();
+  miUsuario=new Usuario();
   // entrar()
   // {
   //   localStorage.setItem('usuario', JSON.stringify(this.miUsuario.correo));
@@ -28,10 +28,11 @@ export class LoginComponent  {
   }
   async onLogin()
   {
-    const user=await this.authSvc.onLogin(this.usuario);
+    console.log(this.usuario);
+
+    const user=await this.authSvc.login(this.usuario);
     if(this.usuario){
       console.log('Successfully');
-      this.router.navigateByUrl('/home');
     }
   }
 }
