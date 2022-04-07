@@ -26,27 +26,16 @@ export class AuthService {
       console.log('Algo esta mal: ', err.message);
     });
   }
-  //login
 
-  // await onLogin(usuario:Usuario){
-  //   try{
-  //     return await this.afAuth.signInWithEmailAndPassword(usuario.correo,usuario.contrasena);
-  //   }
-  //   catch(error)
-  //   {
-  //   console.log('Error en login',error)
-
-  //   }
-  // }
-  // async onRegister(usuario:Usuario){
-  //   try{
-  //     return await this.afAuth.createUserWithEmailAndPassword(usuario.correo,usuario.contrasena);
-  //   }
-  //   catch(error)
-  //   {
-  //   console.log('Error en registro',error)
-
-  //   }
-  // }
+    registrar(usuario:Usuario){
+    this.afAuth.createUserWithEmailAndPassword(usuario.correo,usuario.contrasena)
+    .then(value => {
+      console.log('Funcionó,usuario registrado');
+      this.router.navigateByUrl('/home');
+    })
+    .catch(err => {
+      console.log('Algo esta mal: ', err.message);
+    });
+  }
 
 }

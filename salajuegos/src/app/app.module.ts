@@ -13,13 +13,17 @@ import { QuienSoyComponent } from "./quien-soy/quien-soy.component";
  import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
  import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
+import { RegistroComponent } from './registro/registro.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    QuienSoyComponent
+    QuienSoyComponent,
+    RegistroComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

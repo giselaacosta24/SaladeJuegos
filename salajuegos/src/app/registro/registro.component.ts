@@ -3,28 +3,28 @@ import { Usuario } from '../Entidades/usuario';
 import { Router } from '@angular/router';
 import {AuthService } from '../servicios/auth.service'
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css']
 })
-export class LoginComponent  {
-
+export class RegistroComponent implements OnInit {
 
   miUsuario=new Usuario();
 
   constructor(private authSvc:AuthService,private router:Router) { }
 
 
- 
-  async onLogin()
+  ngOnInit() {
+  }
+  async Registrar()
   {
     console.log(this.miUsuario);
 
-    const user=await this.authSvc.login(this.miUsuario);
+    const user=await this.authSvc.registrar(this.miUsuario);
    
   }
-  registrar(){
+  iraLogin(){
     
-      this.router.navigateByUrl('/registro');
-  }
+    this.router.navigateByUrl('/login');
+}
 }
