@@ -1,5 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+You can add global styles to this file, and also import other style files
 body {
-    background: #054462;
+    background-image: url(./assets/imagenes/fondologin.jpg);
+
+    /* background: #054462; */
     font-family: 'Roboto', sans-serif;
 }
