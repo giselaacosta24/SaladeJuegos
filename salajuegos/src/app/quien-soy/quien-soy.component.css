@@ -53,7 +53,7 @@ body{
 	left: calc(50% - 255px);
 	z-index: 2;
 }
-.container{
+.container h2{
 	position: absolute;
 	top: calc(50% - 75px);
 	left: calc(50% - 50px);

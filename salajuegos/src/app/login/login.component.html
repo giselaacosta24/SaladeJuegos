@@ -10,7 +10,9 @@
 				<input type="text" placeholder="ingrese usuario"  [(ngModel)]="miUsuario.correo" name="user"><br>
 				<input type="password" placeholder="ingrese contraseña" [(ngModel)]="miUsuario.contrasena"  name="password"><br>
 				<input type="button" (click)="onLogin()" value="Ingresar">
-                <input type="button" (click)="registrar()" value="Registrar">
+				<br>
+				<h2>No tienes usuario registrado?</h2>
+			    <input type="button" (click)="registrar()" value="Registrar">
 
 		</div>
 
