@@ -1,7 +1,14 @@
 You can add global styles to this file, and also import other style files
 body {
-    background-image: url(./assets/imagenes/fondologin.jpg);
+  
 
-    /* background: #054462; */
-    font-family: 'Roboto', sans-serif;
+background-image: url(./assets/imagenes/fondologin.jpg) no-repeat center center fixed; 
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+height:100%;
+
 }

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   public isLoggged:any=false;
+  public message:string='';
   constructor(public afAuth:AngularFireAuth,public router:Router) {
     afAuth.authState.subscribe(user=>this.isLoggged=user)
   }
@@ -16,25 +17,32 @@ export class AuthService {
 
 
 
-  login(usuario:Usuario) {
+   async login(usuario:Usuario) {
     this.afAuth.signInWithEmailAndPassword(usuario.correo,usuario.contrasena)
     .then(value => {
       console.log('Funcionó,usuario logueado');
       this.router.navigateByUrl('/home');
+      
     })
     .catch(err => {
-      console.log('Algo esta mal: ', err.message);
+      console.log('Algo esta mal: ', err);
+      localStorage.setItem('fireauth',err.message);
+
     });
   }
 
     registrar(usuario:Usuario){
+
     this.afAuth.createUserWithEmailAndPassword(usuario.correo,usuario.contrasena)
     .then(value => {
       console.log('Funcionó,usuario registrado');
       this.router.navigateByUrl('/home');
+
     })
     .catch(err => {
       console.log('Algo esta mal: ', err.message);
+      localStorage.setItem('fireauth',err.message);
+
     });
   }
 

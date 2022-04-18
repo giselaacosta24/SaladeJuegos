@@ -17,6 +17,11 @@ body{
 	font-size: 35px;
 	font-weight: 200;
 }
+span{
+	color: #fff;
+	font-size: 15px;
+
+}
 .body{
 	position: absolute;
 	top: -20px;

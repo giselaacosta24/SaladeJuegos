@@ -5,11 +5,43 @@
 			<div>Sala<span>de</span>Juegos</div>
 		</div>
 		<br>
-		<div class="login">
-				<input type="text" placeholder="ingrese usuario"  [(ngModel)]="miUsuario.correo" name="user"><br>
-				<input type="password" placeholder="ingrese contraseña" [(ngModel)]="miUsuario.contrasena"  name="password"><br>
-				<input type="button" (click)="Registrar()" value="Registrar">
-				<h2>Si ya tienes usuario registrado</h2>
-                <input type="button" (click)="iraLogin()" value="Login">
+		
+					<div class="login">
+							<form name="form" [formGroup]="formularioContacto" > 
+				
 
+								<div class="form-group">
+								   <input type="text" class="form-control" placeholder="ingrese correo" [(ngModel)]="miUsuario.correo" formControlName="correo"
+									 [class]="isValidField('correo')">
+								   <div class="invalid-feedback">
+									 <span *ngIf="formularioContacto.get('correo')?.errors?.['pattern']">
+									   El correo debe tener un formato valido.
+									 </span>
+									 <span *ngIf="formularioContacto.get('correo')?.errors?.['required']">
+									   El correo no puede quedar vacio.
+									 </span>
+								   </div>
+					   
+					   
+								   <input type="password" class="form-control" [(ngModel)]="miUsuario.contrasena" placeholder="ingrese contraseña" formControlName="contraseña"
+									 [class]="isValidField('contraseña')">
+								   <div class="invalid-feedback">
+									 <span *ngIf="formularioContacto.get('contraseña')?.errors?.['required']">
+									   La contraseña no puede quedar vacia.
+									 </span>
+									 <span *ngIf="formularioContacto.get('contraseña')?.errors?.['minlength']">
+									   La contraseña debe tener por lo menos los 6 minimos caracteres para ser valida.
+									 </span>
+								   </div>
+								 </div>
+					<input type="button" (click)="Registrar()" value="Registrar"> 
+					<br>
+					<div><span *ngIf="mess?.length">{{mess}}</span></div>
+					<div> <span >{{resultado}}</span></div>
+	
+					<h2>No tienes usuario registrado?</h2>
+					<input type="button" (click)="iraLogin()" value="Login">
+	
+			
+		</form>
 		</div>

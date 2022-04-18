@@ -10,7 +10,18 @@ body{
 	font-family: Arial;
 	font-size: 12px;
 }
+.h2{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 35px;
+	font-weight: 200;
+}
+span{
+	color: #fff;
+	font-size: 15px;
 
+}
 .body{
 	position: absolute;
 	top: -20px;
@@ -79,7 +90,15 @@ body{
 	font-weight: 400;
 	padding: 4px;
 }
-
+.login h2{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-size: 20px;
+	font-weight: 200; 
+	width: 250px;
+	height: 30px;
+}
 .login input[type=password]{
 	width: 250px;
 	height: 30px;
@@ -121,15 +140,7 @@ body{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);
 }
-.login h2{
-	float: left;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 20px;
-	font-weight: 200; 
-	width: 250px;
-	height: 30px;
-}
+
 .login input[type=password]:focus{
 	outline: none;
 	border: 1px solid rgba(255,255,255,0.9);

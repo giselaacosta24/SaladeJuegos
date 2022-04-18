@@ -10,8 +10,15 @@ export class HomeComponent  {
 
   constructor(private router:Router) { }
 
+  ngOnInit(): void {
+   // localStorage.removeItem('fireauth');
+  }
+  
+
   iraLogin(){
     
     this.router.navigateByUrl('/login');
+    localStorage.removeItem('fireauth');
+
 }
 }
