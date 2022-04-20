@@ -36,8 +36,9 @@
 					</div>
 				  </div>
 				<input type="button" (click)="onLogin()" value="Ingresar"> 
+				<input type="button" (click)="admin()"  value="Ingresar como admin">
+				<input type="button" (click)="invitado()"  value="Ingresar como invitado">
 				<br>
-				<div><span *ngIf="mess?.length" or  mess!="null">{{mess}}</span></div>
 
 				<div> <span >{{resultado}}</span></div>
 

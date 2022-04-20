@@ -16,6 +16,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { RouteReuseStrategy } from '@angular/router';
 
 @NgModule({
   declarations: [

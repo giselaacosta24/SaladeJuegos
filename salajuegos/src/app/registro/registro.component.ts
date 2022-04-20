@@ -13,21 +13,16 @@ export class RegistroComponent implements OnInit {
 
   miUsuario=new Usuario();
   resultado!: string;
-mess:string;
-formularioContacto: FormGroup;
-private isEmail = /\S+@\S+\.\S+/;
+  formularioContacto: FormGroup;
+  private isEmail = /\S+@\S+\.\S+/;
 
-constructor(private authSvc:AuthService,private router:Router,private fb: FormBuilder) { }
+constructor(private authSvc:AuthService,private router:Router,private fb: FormBuilder) { 
+}
 
-
-
-
-  iraLogin(){
+ iraLogin(){
     
     this.router.navigateByUrl('/login');
 }
-
-
 
 
 ngOnInit(): void {
@@ -36,32 +31,22 @@ ngOnInit(): void {
 }
 
 
-
-
-async Registrar(): Promise<void> {
+ Registrar() {
   if (this.formularioContacto.valid) {
     try {
-      console.log(this.miUsuario);
       const formValue = this.formularioContacto.value;
-
-      await this.authSvc.registrar(this.miUsuario);
-      this.obtenerError();
-
     
+      this.authSvc.registrar(this.miUsuario);
+
+
     } catch (e) {
       console.log(e);
     }
   }
+  
 }
 
-obtenerError()
-{
-  if(JSON.stringify(localStorage.getItem('fireauth')) != '' || JSON.stringify(localStorage.getItem('fireauth')) !== null)
-  this.mess=JSON.stringify(localStorage.getItem('fireauth'));
-  console.log('hola:',this.mess);
 
-
-}
 
  notRequiredHasValue(field: string): string {
   return this.formularioContacto.get(field)?.value ? 'is-valid' : '';
@@ -82,4 +67,6 @@ private initForm(): void {
 
   });
 }
+
+
 }

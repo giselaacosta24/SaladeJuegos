@@ -12,8 +12,8 @@ import { FormGroup, FormBuilder, Validators, FormControl,ReactiveFormsModule} fr
 export class LoginComponent  {
   resultado!: string;
   miUsuario=new Usuario();
-mess:string;
 formularioContacto: FormGroup;
+user= { email : '', password : ''};
 
 private isEmail = /\S+@\S+\.\S+/;
  constructor(private authSvc:AuthService,private router:Router,private fb: FormBuilder) { }
@@ -33,10 +33,8 @@ private isEmail = /\S+@\S+\.\S+/;
     if (this.formularioContacto.valid) {
       try {
         const formValue = this.formularioContacto.value;
-        console.log(this.miUsuario);
 
         await this.authSvc.login(this.miUsuario);
-        this.obtenerError();
 
             } catch (e) {
         console.log(e);
@@ -44,14 +42,19 @@ private isEmail = /\S+@\S+\.\S+/;
     }
   }
 
-  
-obtenerError()
+
+
+
+admin()
 {
-  if(JSON.stringify(localStorage.getItem('fireauth')) != '' || JSON.stringify(localStorage.getItem('fireauth')) !== null)
-  this.mess=JSON.stringify(localStorage.getItem('fireauth'));
-  console.log('hola:',this.mess);
+  this.miUsuario.correo="gise11@gmail.com";
+  this.miUsuario.contrasena="00000000";
+}
 
-
+invitado()
+{
+  this.miUsuario.correo="gise12@gmail.com";
+    this.miUsuario.contrasena="00000000";
 }
    notRequiredHasValue(field: string): string {
     return this.formularioContacto.get(field)?.value ? 'is-valid' : '';

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {AuthService } from '../servicios/auth.service'
 
 @Component({
   selector: 'app-home',
@@ -7,18 +8,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
-
-  constructor(private router:Router) { }
-
+  constructor(private router:Router,public afAuth:AuthService) { }
   ngOnInit(): void {
-   // localStorage.removeItem('fireauth');
+ 
   }
   
 
   iraLogin(){
-    
-    this.router.navigateByUrl('/login');
-    localStorage.removeItem('fireauth');
+    this.afAuth.salir();
 
 }
 }
