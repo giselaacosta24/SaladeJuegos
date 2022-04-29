@@ -3,7 +3,7 @@ import { Usuario } from '../Entidades/usuario';
 import { Router } from '@angular/router';
 import {AuthService } from '../servicios/auth.service';
 import { FormGroup, FormBuilder, Validators, FormControl,ReactiveFormsModule} from '@angular/forms';
-
+import { UsuarioService } from '../servicios/usuario.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,7 +16,7 @@ formularioContacto: FormGroup;
 user= { email : '', password : ''};
 
 private isEmail = /\S+@\S+\.\S+/;
- constructor(private authSvc:AuthService,private router:Router,private fb: FormBuilder) { }
+ constructor(private authSvc:AuthService,private router:Router,private fb: FormBuilder,public usudb:UsuarioService) { }
 
 
   ngOnInit(): void {

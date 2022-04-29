@@ -1,8 +1,8 @@
 export class Usuario {
 
-
-correo :string='';
-contrasena :string='';
-
+    $key: string;
+    correo :string;
+    contrasena :string;
+ 
 
 }

@@ -32,7 +32,6 @@ span{
 	height: auto;
 	background-image: url(../../assets/imagenes/fondologin.jpg);
 	background-size: cover;
-	-webkit-filter: blur(5px);
 	z-index: 0;
 }
 
