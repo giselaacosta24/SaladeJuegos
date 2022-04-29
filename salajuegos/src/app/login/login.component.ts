@@ -47,13 +47,13 @@ private isEmail = /\S+@\S+\.\S+/;
 
 admin()
 {
-  this.miUsuario.correo="gise11@gmail.com";
+  this.miUsuario.correo="admin@gmail.com";
   this.miUsuario.contrasena="00000000";
 }
 
 invitado()
 {
-  this.miUsuario.correo="gise12@gmail.com";
+  this.miUsuario.correo="invitado@gmail.com";
     this.miUsuario.contrasena="00000000";
 }
    notRequiredHasValue(field: string): string {
