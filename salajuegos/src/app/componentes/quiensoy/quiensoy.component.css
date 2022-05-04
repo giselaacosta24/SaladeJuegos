@@ -40,19 +40,26 @@ body {
 	font-weight: 300;
 }
 
-.titulo{
+.header{
 	position: absolute;
-	top: calc(40% - 00px);
-	left: calc(40% - 300px);
+	top: calc(50% - 80px);
+	left: calc(50% - 255px);
 	z-index: 2;
   max-width:50%;
   max-height:50%;
+  color: #fff;
+}
+.titulo{
+	position: absolute;
+	top: calc(40% - 10px);
+	left: calc(40% - 350px);
+	z-index: 2;
 }
 
 .header{
 	position: absolute;
-	/* top: calc(150% -0px);
-	left: calc(200% 600px); */
+	 top: calc(50% -10px);
+	left: calc(100% 60px); 
 	z-index: 2;
   
 }
@@ -60,8 +67,8 @@ img{
 	position: relative;
   display: flex;
 
-  max-width:50%;
-  max-height:50%;
+  max-width:40%;
+  max-height:40%;
   z-index: 2;
 
 }
@@ -76,7 +83,7 @@ img{
 	color: #aebbe7 !important;
 }
 
-.header h3{
+.titulo2 h3{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
@@ -85,7 +92,7 @@ img{
 }
 
 
-.header p{
+.titulo2 p{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
