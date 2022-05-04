@@ -1,0 +1,12 @@
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+  footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  footer p {
+    margin-bottom: .200rem;
+  }
+

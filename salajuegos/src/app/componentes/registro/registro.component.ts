@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../Entidades/usuario';
+import { Usuario } from '../../Entidades/usuario';
 import { Router } from '@angular/router';
-import {AuthService } from '../servicios/auth.service'
+import {AuthService } from '../../servicios/auth.service'
 import { FormGroup, FormBuilder, Validators, FormControl,ReactiveFormsModule} from '@angular/forms';
 
 @Component({

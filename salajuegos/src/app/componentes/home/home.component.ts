@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import {AuthService } from '../servicios/auth.service'
+import {AuthService } from '../../servicios/auth.service'
 import  {AngularFireDatabase,AngularFireList, AngularFireObject} from  '@angular/fire/compat/database';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
