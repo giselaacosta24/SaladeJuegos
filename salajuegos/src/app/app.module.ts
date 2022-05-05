@@ -18,6 +18,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { RouteReuseStrategy } from '@angular/router';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { ChatComponent } from './componentes/chat/chat.component';
+import { JuegosComponent } from './componentes/juegos/juegos.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
     QuiensoyComponent,
     RegistroComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ChatComponent,
+    JuegosComponent
   ],
   imports: [
     BrowserModule,

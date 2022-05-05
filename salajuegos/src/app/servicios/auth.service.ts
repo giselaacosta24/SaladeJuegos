@@ -21,6 +21,9 @@ export class AuthService {
     this.usuarioRegistro=new UsuarioRegistro();
   }
 
+  getUserLogged() {
+    return this.afAuth.authState;
+  }
 
 getUser():any{
 
